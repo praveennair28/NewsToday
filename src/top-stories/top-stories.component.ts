@@ -13,6 +13,7 @@ export class TopStoriesComponent implements OnInit,OnChanges {
   @Input() categoryInput: string ='World';
   public newsList: news[] = [];
   public pageRefreshed = false;
+  public isLoading = false;
   ngOnInit(): void {
     this.getNewsData();
   }
@@ -22,6 +23,7 @@ export class TopStoriesComponent implements OnInit,OnChanges {
 
   getNewsData()
   {
+    this.isLoading = true;
     this.newsList=[];
     this.api.topHeadlines(this.categoryInput).subscribe(result => {
       console.log(result);
@@ -35,6 +37,7 @@ export class TopStoriesComponent implements OnInit,OnChanges {
       });
     })    
     this.pageRefreshed = !this.pageRefreshed;
+    this.isLoading = false;
     this.cdr.detectChanges();
   }
   newsCategorySelected(category: any)

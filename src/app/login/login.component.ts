@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.authservice.getToken(this.current_user).subscribe(result => {
       console.log(result);
       this.setCookie(result);
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('Home');
     })
   }
   setCookie(currentCookie: any) {

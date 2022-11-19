@@ -1,0 +1,14 @@
+<form #search = "ngForm" (ngSubmit) = "Search(search.value)" style="width:30%">
+    <div class="form-outline mb-4" style="padding-left: 20px;padding-top:20px;">
+      <input type="text" name = "search-key" placeholder = "Enter search key" ngModel id="search" class="form-control" />
+    </div>  
+    <!-- Submit button -->
+    <div style="padding-left: 20px;padding-top:1px;">
+        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="Search(search.value)">Search</button>
+    </div> 
+  </form>
+
+  
+<app-news-page  [newsList]="newsList" 
+                [pageRefreshed] = "pageRefreshed">
+</app-news-page>

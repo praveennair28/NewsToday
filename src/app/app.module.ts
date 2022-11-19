@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { JwtInterceptor } from './JwtInterceptor';
 import { NewsPageComponent } from './news-page/news-page.component';
+import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
+import { SearchNewsComponent } from './search-news/search-news.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NewsPageComponent } from './news-page/news-page.component';
     TopStoriesComponent,
     ShortPipe,
     LoginComponent,
-    NewsPageComponent
+    NewsPageComponent,
+    LoadingIndicatorComponent,
+    SearchNewsComponent
   ],
   imports: [
     BrowserModule,
