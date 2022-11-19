@@ -1,0 +1,27 @@
+
+  <!-- <form #userlogin = "ngForm" (ngSubmit) = "Login(userlogin.value)" >
+    <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+    <br/>
+    <input type = "password" name = "passwd" placeholder = "passwd" ngModel>
+    <br/>
+    <input type = "submit" value = "submit">
+ </form> -->
+
+ <form #userlogin = "ngForm" (ngSubmit) = "Login(userlogin.value)" style="width:30%">
+    <!-- Email input -->
+    <div class="form-outline mb-4" style="padding-left: 20px;padding-top:20px;">
+      <input type="email" name = "emailid" placeholder = "emailid" ngModel id="emailid" class="form-control" />
+      <label class="form-label" for="form2Example1">Email</label>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-2" style="padding-left: 20px;">
+      <input type="password" id="pwd" name = "password" placeholder = "password" ngModel class="form-control" />
+      <label class="form-label" for="form2Example2">Password</label>
+    </div>
+  
+    <!-- Submit button -->
+    <div style="padding-left: 20px;padding-top:20px;">
+        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="Login(userlogin.value)">Sign in</button>
+    </div> 
+  </form>

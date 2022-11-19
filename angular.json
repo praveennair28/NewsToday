@@ -62,6 +62,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "NYTimesNews:build",
+            "proxyConfig": "./proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "NYTimesNews:build:production"
@@ -69,7 +73,7 @@
             "development": {
               "browserTarget": "NYTimesNews:build:development"
             }
-          },
+          },          
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
