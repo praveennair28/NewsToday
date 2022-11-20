@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { news } from 'src/app/models/news';
-import { NewsapiService } from '../app/service/newsapi.service';
+import { NewsapiService } from '../service/newsapi.service';
 
 @Component({
   selector: 'app-top-stories',
@@ -34,10 +34,10 @@ export class TopStoriesComponent implements OnInit,OnChanges {
           url: element?.url
         }
       this.newsList.push(newsObj);
+      this.isLoading = false;
       });
     })    
     this.pageRefreshed = !this.pageRefreshed;
-    this.isLoading = false;
     this.cdr.detectChanges();
   }
   newsCategorySelected(category: any)

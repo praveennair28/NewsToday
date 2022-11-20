@@ -15,4 +15,5 @@ export class AppComponent {
   OnClick(){
     this.router.navigateByUrl('Home');
   }
+  
 }

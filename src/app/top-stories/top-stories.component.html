@@ -1,0 +1,15 @@
+<div style="padding-left: 20px;">
+        <select #category (change)="newsCategorySelected(category.value)" style="background-color:rgb(119, 198, 235)">
+            <option default>Select a category</option>
+            <option>World</option>
+            <option>Science</option>
+        </select>
+</div>
+
+<app-news-page  [newsList]="newsList" 
+                [pageRefreshed] = "pageRefreshed"
+                origin = "Home">
+</app-news-page>
+
+<app-loading-indicator [show]="isLoading">
+</app-loading-indicator>

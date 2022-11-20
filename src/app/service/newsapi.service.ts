@@ -25,9 +25,7 @@ export class NewsapiService {
     const header = new HttpHeaders().set('accept', 'text/plain')
                           .set('Content-Type', 'application/json')
     const httpParams = new HttpParams().set('api-key', this.api_key)
-                      .set('begin_date', "20120101")
-                      .set('end_date', "20121231")
-
+                      .set('q', searchKey)
     const options = { params: httpParams, header };    
     return this._http.get(this.searchApi,options);
   }  

@@ -4,7 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopStoriesComponent } from '../top-stories/top-stories.component';
+import { TopStoriesComponent } from './top-stories/top-stories.component';
 import { NewsapiService } from './service/newsapi.service';
 import { ShortPipe } from './short.pipe';
 import { AuthApiService } from './service/authapiservice';
@@ -14,6 +14,7 @@ import { JwtInterceptor } from './JwtInterceptor';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 import { SearchNewsComponent } from './search-news/search-news.component';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchNewsComponent } from './search-news/search-news.component';
     LoginComponent,
     NewsPageComponent,
     LoadingIndicatorComponent,
-    SearchNewsComponent
+    SearchNewsComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,

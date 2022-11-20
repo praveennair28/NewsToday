@@ -1,14 +1,21 @@
-<form #search = "ngForm" (ngSubmit) = "Search(search.value)" style="width:30%">
-    <div class="form-outline mb-4" style="padding-left: 20px;padding-top:20px;">
-      <input type="text" name = "search-key" placeholder = "Enter search key" ngModel id="search" class="form-control" />
-    </div>  
-    <!-- Submit button -->
-    <div style="padding-left: 20px;padding-top:1px;">
-        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="Search(search.value)">Search</button>
-    </div> 
+<form #search = "ngForm" (ngSubmit) = "Search(search.value)">
+    <div style="padding-left: 20px;padding-top:20px;">
+        <span style="display:inline;">
+          <input type="text" name="search-key" placeholder = "Enter search key" ngModel id="search" class="input"/>
+        </span>
+        <span style="display:inline;">
+            <button type="submit" class="btn btn-primary" (click)="Search(search.value)" style="margin-left: 30px;;">Search</button>
+        </span>
+    </div>
+    <p *ngIf = "searchKeyInvalid" style="padding-left: 20px; color:rgb(237, 71, 85);">Enter some text to search</p>
   </form>
+ 
 
-  
 <app-news-page  [newsList]="newsList" 
-                [pageRefreshed] = "pageRefreshed">
+                [pageRefreshed] = "pageRefreshed"
+                origin = "Search">
 </app-news-page>
+
+<app-loading-indicator [show]="isLoading">
+</app-loading-indicator>
+
