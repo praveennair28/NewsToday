@@ -1,27 +1,47 @@
-# NYTimesNews
+# NewsToday
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
-## Development server
+## Steps
+1. Download the code
+2. npm install
+3. ng serve
+4. Open the app http://localhost:4200/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To support this app we need another server-app to be run parallelly to generate the jwt tokens
+1. Download https://github.com/techiediaries/fake-api-jwt-json-server
+2. npm install
+3. npm run start-auth
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To check the test cases and code coverage;
+1. ng test --code-coverage
+2. This will generate code coverage report and test case status
 
-## Build
+##Features:
+1. News Home page
+2. News by category
+3. Search news
+4. Pagination
+5. Open individual news in a separte view.
+6. Login/Registration
+7. Jwt token authentication in each API call
+![image](https://user-images.githubusercontent.com/40316788/203126789-67e1c6ee-f28f-432a-8aaf-03da7ffc2b51.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+##Highlights:
+Reusable components
+Unit tests with 75% code coverage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##Notes to consider:
 
-## Running end-to-end tests
+Top stories and search API response does not have detailed text to display, so the title is used to replace the content
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+It is obeserved that server API calls are failing if sending with a valid auth token. It is working fine without Authorizatio header. 
+Though Jwt authentication mechanisam is implemented, the respective code to add authorization header in HttpInterceptor is commented out as server is failing to authorize it.
+Observe the network calls and response to verify the above comments.
 
-## Further help
+API given for comment section is not accessable
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://user-images.githubusercontent.com/40316788/203124676-fa405c87-316c-400c-b3ed-55795c96bddb.png)
+
