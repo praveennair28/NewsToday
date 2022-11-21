@@ -23,7 +23,6 @@ export class NewsPageComponent implements OnInit {
     this.cdr.detectChanges();
   }
   ngOnChanges() {
-    console.log("pageRefreshed",this.pageRefreshed,this.newsList);
     this.cdr.detectChanges();
   }
   ReadMore(data: any){
@@ -35,12 +34,12 @@ export class NewsPageComponent implements OnInit {
   goBack(data: any){
     if(this.origin =='Home')
     {
-      this.router.navigateByUrl('Home');
+      //this.router.navigateByUrl('Home');
       this.isNewsDetail = false;
     } 
     else if(this.origin=='Search')
     {
-      this.router.navigateByUrl('Search');
+      //this.router.navigateByUrl('Search');
       this.isNewsDetail = false;
     }
   }

@@ -40,6 +40,7 @@ export class TopStoriesComponent implements OnInit,OnChanges {
     this.pageRefreshed = !this.pageRefreshed;
     this.cdr.detectChanges();
   }
+  
   newsCategorySelected(category: any)
   {
     this.categoryInput = category;

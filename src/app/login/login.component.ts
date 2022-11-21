@@ -10,7 +10,7 @@ import { AuthApiService } from '../service/authapiservice';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private cookie: any = null;
+  public cookie: any = null;
   emailId : string = '';
   password: string = '';
   current_user: user;
@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
     this.current_user.email = data.emailid;
     this.current_user.password = data.password;
     this.authservice.Login(this.current_user).subscribe(result => {
-      console.log(result);
       this.setCookie(result);
       this.router.navigateByUrl('Home');
     })

@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<pagination-controls (pageChange)="p = $event" *ngIf="!isNewsDetail && newsList.length > 0" style="float:right;margin-right:20px"></pagination-controls>
+<pagination-controls (pageChange)="p = $event" *ngIf="!isNewsDetail && newsList?.length > 0" style="float:right;margin-right:20px"></pagination-controls>
 
 <div style="margin-left: 20px;margin: right 70px;padding-left: 25px;padding-right: 25px;">
     <app-news-detail *ngIf="isNewsDetail" 
