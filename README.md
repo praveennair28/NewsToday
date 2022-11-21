@@ -26,6 +26,8 @@ To check the test cases and code coverage;
 5. Open individual news in a separte view.
 6. Login/Registration
 7. Jwt token authentication in each API call
+![image](https://user-images.githubusercontent.com/40316788/203126789-67e1c6ee-f28f-432a-8aaf-03da7ffc2b51.png)
+
 
 ##Highlights:
 Reusable components
