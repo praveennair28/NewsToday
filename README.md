@@ -18,7 +18,7 @@ To check the test cases and code coverage;
 1. ng test --code-coverage
 2. This will generate code coverage report and test case status
 
-##Features
+##Features:
 1. News Home page
 2. News by category
 3. Search news
@@ -31,8 +31,12 @@ To check the test cases and code coverage;
 Reusable components
 Unit tests with 75% code coverage
 
-##Note:
+##Notes to consider:
 It is obeserved that server API calls are failing if sending with a valid auth token. It is working fine without Authorizatio header. 
 Though Jwt authentication mechanisam is implemented, the respective code to add authorization header in HttpInterceptor is commented out as server is failing to authorize it.
 Observe the network calls and response to verify the above comments.
+
+API given for comment section is not accessable
+Top stories and search API response does not have detailed text to display, so the title is used to replace the content
+![image](https://user-images.githubusercontent.com/40316788/203124676-fa405c87-316c-400c-b3ed-55795c96bddb.png)
 
