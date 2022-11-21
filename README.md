@@ -32,11 +32,14 @@ Reusable components
 Unit tests with 75% code coverage
 
 ##Notes to consider:
+
+Top stories and search API response does not have detailed text to display, so the title is used to replace the content
+
 It is obeserved that server API calls are failing if sending with a valid auth token. It is working fine without Authorizatio header. 
 Though Jwt authentication mechanisam is implemented, the respective code to add authorization header in HttpInterceptor is commented out as server is failing to authorize it.
 Observe the network calls and response to verify the above comments.
 
 API given for comment section is not accessable
-Top stories and search API response does not have detailed text to display, so the title is used to replace the content
+
 ![image](https://user-images.githubusercontent.com/40316788/203124676-fa405c87-316c-400c-b3ed-55795c96bddb.png)
 
