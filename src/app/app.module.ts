@@ -15,6 +15,7 @@ import { NewsPageComponent } from './news-page/news-page.component';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 import { SearchNewsComponent } from './search-news/search-news.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [NewsapiService,
               AuthApiService,

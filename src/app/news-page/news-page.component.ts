@@ -12,7 +12,8 @@ export class NewsPageComponent implements OnInit {
   public imageurl = '';
   public title = '';
   public data = '';
-
+  p: number = 1;
+  
   constructor(private api: NewsapiService,private cdr: ChangeDetectorRef,private router: Router) { }
   @Input() newsList: any;
   @Input() pageRefreshed: boolean = true;

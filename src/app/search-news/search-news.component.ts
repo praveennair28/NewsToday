@@ -16,8 +16,28 @@ export class SearchNewsComponent implements OnInit {
   constructor(private api: NewsapiService,private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    this.getNewsData();
   }
- 
+  getNewsData()
+  {
+    this.isLoading = true;
+    this.newsList=[];
+    this.api.topHeadlines("World").subscribe(result => {
+      console.log(result);
+      result?.results.forEach((element: any) => {
+        var newsObj = {
+          title : element?.title,
+          imageurl: element?.multimedia && element?.multimedia[0] ? element?.multimedia[0]?.url : null,
+          url: element?.url
+        }
+      this.newsList.push(newsObj);
+      this.isLoading = false;
+      });
+    })    
+    this.pageRefreshed = !this.pageRefreshed;
+    this.cdr.detectChanges();
+  }
+
   Search(data: any)
   {
     if(!data['search-key']){

@@ -23,7 +23,16 @@ export class LoginComponent implements OnInit {
   Login(data: any){
     this.current_user.email = data.emailid;
     this.current_user.password = data.password;
-    this.authservice.getToken(this.current_user).subscribe(result => {
+    this.authservice.Login(this.current_user).subscribe(result => {
+      console.log(result);
+      this.setCookie(result);
+      this.router.navigateByUrl('Home');
+    })
+  }
+  Register(data: any){
+    this.current_user.email = data.emailid;
+    this.current_user.password = data.password;
+    this.authservice.Register(this.current_user).subscribe(result => {
       console.log(result);
       this.setCookie(result);
       this.router.navigateByUrl('Home');

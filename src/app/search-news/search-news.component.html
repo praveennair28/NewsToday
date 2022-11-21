@@ -1,7 +1,7 @@
 <form #search = "ngForm" (ngSubmit) = "Search(search.value)">
-    <div style="padding-left: 20px;padding-top:20px;">
+    <div style="padding-left: 15px;padding-top:20px;">
         <span style="display:inline;">
-          <input type="text" name="search-key" placeholder = "Enter search key" ngModel id="search" class="input"/>
+          <input type="text" name="search-key" placeholder = "Search here!" ngModel id="search" class="input" style="border: 1px solid rgba(169, 154, 154, 0.737);"/>
         </span>
         <span style="display:inline;">
             <button type="submit" class="btn btn-primary" (click)="Search(search.value)" style="margin-left: 30px;;">Search</button>

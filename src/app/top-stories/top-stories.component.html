@@ -1,8 +1,11 @@
-<div style="padding-left: 20px;">
-        <select #category (change)="newsCategorySelected(category.value)" style="background-color:rgb(119, 198, 235)">
+<div style="padding-left: 10px;">
+        <select #category (change)="newsCategorySelected(category.value)" 
+                        class="form-control" 
+                        style="width:13%;background-color:rgb(246, 219, 194);color:black">
             <option default>Select a category</option>
             <option>World</option>
             <option>Science</option>
+            <option>Arts</option>
         </select>
 </div>
 
